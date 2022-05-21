@@ -22,7 +22,16 @@ In order to launch this project , follow with me the next steps :
   cd microservices-kafka-docker
   ```
   
-#### 3 -- Run the project :
+#### 3 -- Built the ms-producer image :
+```sh
+  docker build -t kafka-ms-producer ./producer
+  ```
+#### 4 -- Built the ms-consumer image :
+```sh
+  docker build -t kafka-ms-consumer ./consumer
+  ```
+  
+#### 5 -- Run the project :
 ```sh
   docker-compose up
   ```
