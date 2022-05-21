@@ -1,9 +1,10 @@
 # microservices-kafka-docker
-an example of two simple microservices built springboot to demonstrate asynchronous communication 
-between microservices with kafka, and containerizing all the tools ( microservices , kafka broker ... ) within docker compose.
+an example of two simple microservices built with springboot to demonstrate asynchronous communication 
+between microservices with kafka, finally containerizing all the tools ( microservices , kafka broker ... ) and running it 
+using docker compose.
 
 ### Prerequisites :
-In order to launch this project you should be having the following software, tool & packages installed in your machine :
+In order to launch this project you should be having the following software, tool & packages installed in  your machine :
 * docker
 * docker-compose
 * spring-boot ( optional ).
