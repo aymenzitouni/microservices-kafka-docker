@@ -46,3 +46,31 @@ services:
       KAFKA_BROKERCONNECT: "kafka:29092"
     depends_on:
       - "kafka"
+
+  ms-producer:
+    image: kafka-ms-producer
+    container_name: kafka-ms-producer
+    restart: "no"
+    networks:
+      - kafka-net
+    environment:
+      spring.kafka.producer.bootstrap-servers: "kafka:29092"
+    ports:
+      - "8080:8080"
+
+    depends_on:
+      - "kafka"
+
+  ms-consumer:
+    image: kafka-ms-consumer
+    container_name: kafka-ms-consumer
+    restart: "no"
+    networks:
+      - kafka-net
+    environment:
+      spring.kafka.consumer.bootstrap-servers: "kafka:29092"
+    ports:
+      - "8081:8081"
+
+    depends_on:
+      - "kafka"
